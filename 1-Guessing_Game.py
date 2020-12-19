@@ -7,15 +7,21 @@ def guessing_game():
     print(f'Hello, {name}!')
     guess = int(input(f'{name}, guess what number I have!'))
 
-    while True:
+    cont = 0
+
+    while cont < 5:
         if guess > number:
             print(f' Your guess of {guess} is too high! Guess again:')
+            cont += 1
         if guess < number:
             print(f'Your guess of {guess} is too low! Guess again:')
+            cont += 1
         if guess == number:
             print(f'Just right! The number is {guess}!')
             break
         guess = int(input())
+
+    print(f' Sorry {name}. You have exceeded the number of guesses!')
     return
 
 
