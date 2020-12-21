@@ -22,5 +22,16 @@ def float_inteiros(f, x, y):
     decimal = d[2:2+y]
     return (inteiro + int(decimal) / (10 ** len(decimal)))
 
+from decimal import *
+
+def decimal_correto():
+    decimal1 = Decimal(input('Entre um número decimal:'))
+    decimal2 = Decimal(input('Entre um número decimal:'))
+
+    print("A soma é {}".format(float(decimal1 + decimal2)))
+
+
+
+
 
 
